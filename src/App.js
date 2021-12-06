@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
+import TaskInput from './components/task-input/TaskInput';
+import React, { useState } from 'react';
+import NumberList from './components/to-do-item/ToDoList';
 function App() {
+  const [miaw, setMiaw] = useState([])
+  console.log(miaw);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TaskInput Placeholder="add item..." submit={task => setMiaw(miaw.concat(task))} />
+      <NumberList numbers = {miaw}/>
     </div>
   );
 }
