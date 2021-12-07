@@ -1,14 +1,16 @@
 import './App.css';
-import TaskInput from './components/task-input/TaskInput';
 import React, { useState } from 'react';
-import NumberList from './components/to-do-item/ToDoList';
+import TaskInput from './components/task-input/TaskInput';
+import ToDoList from './components/create-full-list/ToDoList';
+
+
 function App() {
-  const [miaw, setMiaw] = useState([])
-  console.log(miaw);
+  const [listArr, setListArr] = useState([])
+  console.log(listArr);
   return (
     <div className="App">
-      <TaskInput Placeholder="add item..." submit={task => setMiaw(miaw.concat(task))} />
-      <NumberList numbers = {miaw}/>
+      <TaskInput Placeholder="add item..." submit={task => setListArr(listArr.concat(task))} />
+      <ToDoList items = {listArr}/>
     </div>
   );
 }
