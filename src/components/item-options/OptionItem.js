@@ -14,7 +14,7 @@ function OptionItem() {
 
   return (
     <details>
-      <summary>+</summary>
+      <summary style = {{listStyle:"none", cursor: "pointer"}}><b>+</b></summary>
       <input type="number" min="1" max="999" value="1" disabled={bool} />
       <input type="text" placeholder="description..." disabled={bool} />
       <button disabled={bool} onClick={disableOption}>done</button>

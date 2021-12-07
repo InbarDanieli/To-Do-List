@@ -7,13 +7,15 @@ function ToDoList(props) {
   const items = props.items;
   const listItems = items.map((item, index) =>
     <div>
-      <ToDoItem Text={item} key={item + index}/>
-      <OptionItem />
+      <ToDoItem Text={item} key={item + index} /><OptionItem />
     </div>
   );
-  return (
 
-    <ul>{listItems}</ul>
+
+  return (
+    <div>
+      <ul>{listItems}</ul>
+    </div>
   );
 }
 

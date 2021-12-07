@@ -10,8 +10,10 @@ function ToDoItem(props) {
     else {
       setChecked('none')
     }
-  }
 
+    // props.ifchecked(checked);
+  }
+console.log(checked);
   return (
     <div>
       <input type="checkbox" onChange={EditLineTrough}></input>
