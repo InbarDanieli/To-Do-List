@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import TaskInput from './components/task-input/TaskInput';
-import ToDoList from './components/create-full-list/ToDoList';
+import ToDoList from './components/full-list/ToDoList';
 
 
 function App() {
