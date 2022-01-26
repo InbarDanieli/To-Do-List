@@ -10,12 +10,12 @@ function App() {
 
 
   function setLSitems(items) {
-    localStorage.setItem("items", items)
+    localStorage.setItem("ListItems", items)
     setListArr(items)
   }
 
   function getLSitems() {
-   const items = localStorage.getItem("items").split(",") 
+   const items = localStorage.getItem("ListItems").split(",") 
    return items
   }
 
