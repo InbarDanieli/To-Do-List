@@ -5,11 +5,22 @@ import ToDoList from './components/full-list/ToDoList';
 
 
 function App() {
-  const [listArr, setListArr] = useState([])
-  console.log(listArr);
+  const [listArr, setListArr] = useState(getLSitems() || [])
+  console.log(localStorage)
+
+  function setLSitems(items) {
+    localStorage.setItem("items", items)
+    setListArr(items)
+  }
+
+  function getLSitems() {
+   const items = localStorage.getItem("items").split(",");
+   return items
+  }
+
   return (
     <div className="App">
-      <TaskInput Placeholder="add item..." submit={task => setListArr(listArr.concat(task))} />
+      <TaskInput Placeholder="add item..." submit={task => setLSitems(listArr.concat(task))} />
       <ToDoList items = {listArr}/>
     </div>
   );

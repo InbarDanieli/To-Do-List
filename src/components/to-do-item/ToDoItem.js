@@ -13,7 +13,6 @@ function ToDoItem(props) {
 
     // props.ifchecked(checked);
   }
-console.log(checked);
   return (
     <div>
       <input type="checkbox" onChange={EditLineTrough}></input>
