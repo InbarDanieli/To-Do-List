@@ -5,8 +5,9 @@ import ToDoList from './components/full-list/ToDoList';
 
 
 function App() {
-  const [listArr, setListArr] = useState(getLSitems() || [])
   console.log(localStorage)
+  const [listArr, setListArr] = useState(localStorage.length > 0 ? getLSitems() : [])
+
 
   function setLSitems(items) {
     localStorage.setItem("items", items)
@@ -14,7 +15,7 @@ function App() {
   }
 
   function getLSitems() {
-   const items = localStorage.getItem("items").split(",");
+   const items = localStorage.getItem("items").split(",") 
    return items
   }
 
